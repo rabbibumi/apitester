@@ -10,6 +10,15 @@ namespace ApiTester
     {
         static void Main(string[] args)
         {
+            var api = new SimpleAPI("http://localhost:6109");
+            foreach (var person in api.Get())
+            {
+                Console.WriteLine(person);
+            }
+
+            //api.Test();
+
+            Console.ReadKey(true);
         }
     }
 }
