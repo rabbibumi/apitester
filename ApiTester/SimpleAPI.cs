@@ -24,19 +24,31 @@ namespace ApiTester
                 string result = webClient.DownloadString(_baseUrl + "/api/people");
                 return JsonConvert.DeserializeObject<IEnumerable<Person>>(result);
             }
-        } 
+        }
 
-//        public void Test()
-//        {
-//            using (var webClient = new WebClient())
-//            {
-//                webClient.Headers[HttpRequestHeader.Accept] = "text/xml";
-//                string result = webClient.DownloadString(_baseUrl + "/api/people");
-//                Console.WriteLine(result);
-//            }
-//        }
+        //        public void Test()
+        //        {
+        //            using (var webClient = new WebClient())
+        //            {
+        //                webClient.Headers[HttpRequestHeader.Accept] = "text/xml";
+        //                string result = webClient.DownloadString(_baseUrl + "/api/people");
+        //                Console.WriteLine(result);
+        //            }
+        //        }
 
-        
+
+        public Person Add(string firstName, string lastName, int age)
+        {
+            using (var webClient = new WebClient())
+            {
+                var p = new Person {FirstName = firstName, LastName = lastName, Age = age};
+                string body = JsonConvert.SerializeObject(p);
+                //string body = String.Format("firstName={0}&lastName={1}&age={2}", firstName, lastName, age);
+                webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
+                string result = webClient.UploadString(_baseUrl + "/api/people", body);
+                return JsonConvert.DeserializeObject<Person>(result);
+            }
+        }
     }
 
     public class Person
