@@ -49,6 +49,17 @@ namespace ApiTester
                 return JsonConvert.DeserializeObject<Person>(result);
             }
         }
+
+        public void ScrapePeople()
+        {
+            using (var webClient = new WebClient())
+            {
+                string result = webClient.DownloadString(_baseUrl);
+                Console.WriteLine(result);
+            }
+        } 
+
+
     }
 
     public class Person

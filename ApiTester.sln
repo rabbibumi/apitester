@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTester", "ApiTester\ApiTester.csproj", "{FEE5B87E-C557-4B3E-9998-F904FD7961A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{158A49AB-012D-4628-A7BE-6428DBD16C6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{FEE5B87E-C557-4B3E-9998-F904FD7961A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE5B87E-C557-4B3E-9998-F904FD7961A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE5B87E-C557-4B3E-9998-F904FD7961A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158A49AB-012D-4628-A7BE-6428DBD16C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158A49AB-012D-4628-A7BE-6428DBD16C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158A49AB-012D-4628-A7BE-6428DBD16C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158A49AB-012D-4628-A7BE-6428DBD16C6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
