@@ -1,0 +1,19 @@
+﻿@model MvcApplication34.Controllers.PeopleViewModel
+
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+    </tr>
+    @foreach (var person in Model.People)
+    {
+        <tr>
+            <td>
+                @person.FirstName
+            </td>
+            <td>@person.LastName</td>
+            <td>@person.Age</td>
+        </tr>
+    }
+</table>
